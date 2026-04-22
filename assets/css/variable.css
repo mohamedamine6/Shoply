@@ -1,0 +1,10 @@
+:root {
+    /* header */
+    --header-padding: 20px 80px;
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.06);
+    --color-primary: #1a1a1a;  
+    --color-black: #000000;
+    --color-gray: #666777;
+    --color-accent: #009978;      
+    --color-white: #ffffff;
+}

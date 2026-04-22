@@ -1,0 +1,58 @@
+.custom-navbar {
+  padding: var(--header-padding);
+  box-shadow:var(--shadow-light);
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 24px;
+    transition: 0.3s color;
+    color: var(--color-primary);
+}
+
+.logo span {
+    color: var(--color-accent);
+}
+
+.logo:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav-link {
+  color: var(--color-primary) !important;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover {
+    color: var(--color-gray) !important;
+}
+
+@media (min-width: 991px) {
+        .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        transition: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--color-accent);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before{
+        width: 80%;
+        visibility: visible;
+    } 
+}
+
+.navbar-toggler {
+  border: 1px solid var(--color-primary);
+}
+
+/* icon hamburger */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%231a1a1a' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
