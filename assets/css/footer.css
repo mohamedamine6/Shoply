@@ -30,5 +30,5 @@
 }
 
 .footer-links a:hover {
-    color: var(--color-gray);
+    color: var(--color-accent);
 }

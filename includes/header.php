@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
 
-            <a class="navbar-brand fw-bold logo" href="#">Shop<span>ly</span></a>
+            <a class="navbar-brand fw-bold logo" href="index.php">Shop<span>ly</span></a>
 
             <!-- TOGGLE BUTTON (mobile) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,7 +30,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="shop.php" class="nav-link">Shop</a>
+                        <a href="product.php" class="nav-link">Shop</a>
                     </li>
 
                     <li class="nav-item">
