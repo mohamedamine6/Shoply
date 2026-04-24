@@ -20,3 +20,35 @@ VALUES
 UPDATE products
 SET name = "T-Shirt"
 WHERE id = 1;
+
+ALTER TABLE products ADD category VARCHAR(50);
+
+ALTER TABLE products 
+CHANGE category gender VARCHAR(50);
+
+UPDATE products SET category = "Homme" WHERE id = 1;
+
+UPDATE products SET category_id = 5 WHERE id = 1;
+
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+INSERT INTO categories (name)
+VALUES
+('T-Shirts'),
+('Shoes'),
+('Bags'),
+('Watches');
+
+ALTER TABLE products
+ADD category_id INT;
+
+ALTER TABLE products
+ADD CONSTRAINT fk_category
+FOREIGN KEY (category_id)
+REFERENCES categories(id)
+ON DELETE SET NULL
+ON UPDATE CASCADE;
+

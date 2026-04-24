@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg custom-navbar">
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
         <div class="container">
 
             <a class="navbar-brand fw-bold logo" href="index.php">Shop<span>ly</span></a>

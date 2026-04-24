@@ -20,8 +20,8 @@ $result = mysqli_query($conn, $query);
     <!-- navbar -->
     <?php include 'includes/header.php'; ?>
     <div class="container">
-        <h1 class="my-4 text-center">Our Products</h1>
-        <div class="row g-4 prodetails">
+        <h1 class="my-4 mt-5 text-center">Our Products</h1>
+        <div class="row g-5 prodetails">
         <?php while ($row = mysqli_fetch_assoc($result)) {?>
             <div class='col-12 col-md-3 product-card'>
                 <img class="single-pro-image" src="assets/images/<?php echo $row['image']; ?>">
