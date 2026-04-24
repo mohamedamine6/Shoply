@@ -1,3 +1,15 @@
+<?php
+require 'config/db.php';
+
+$query = "SELECT * FROM products LIMIT 4";
+$result = mysqli_query($conn, $query);
+
+$queryWatch = "SELECT * FROM products WHERE category_id = 4 LIMIT 4";
+$resultWatch = mysqli_query($conn, $queryWatch);
+
+$queryAcc = "SELECT * FROM products WHERE category_id = 3 LIMIT 4";
+$resultAcc = mysqli_query($conn, $queryAcc);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +36,7 @@
         </section>
 
         <!-- FEATURE SECTION -->
-        <section id="feature" class="container my-5">
+        <section id="feature" class="container my-5 py-5">
 
             <div class="row text-center g-4">
 
@@ -100,6 +112,81 @@
                         <button class="text-uppercase">Shop now</button>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="featured" class="my-5 py-5">
+            <div class="container text-center mt-5 py-5">
+                <h3>Our Featured</h3>
+                <hr class="mx-auto">
+                <p>Here you can check our new products with fair price on Shoply</p>
+            </div>
+            <div class="row max-auto container-fluid">
+                <?php while ($row = mysqli_fetch_assoc($result)) { ?> 
+                    <div class="product text-center col-lg-3 col-lg-3 col-12">
+                        <img class="single-pro-image" src="assets/images/<?php echo $row['image']; ?>" width='150'>
+                        <div class="star">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                        </div>
+                        <h3><?php echo $row ['name'];?></h3>
+                        <p><?php echo $row ['price'];?><b> DH</b></p>
+                        <button class="buy-btn">Add to cart</button>
+                    </div>
+                <?php } ?>
+            </div>
+        </section>
+
+        <section id="featured" class="">
+            <div class="container text-center mt-5 py-5">
+                <h3>Our Accessories</h3>
+                <hr class="mx-auto">
+                <p>Here you can check our new products with fair price on Shoply</p>
+            </div>
+            <div class="row max-auto container-fluid">
+                <?php while ($row = mysqli_fetch_assoc($resultAcc)) { ?> 
+                    <div class="product text-center col-lg-3 col-lg-3 col-12">
+                        <img class="single-pro-image" src="assets/images/<?php echo $row['image']; ?>" width='150'>
+                        <div class="star">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                        </div>
+                        <h3><?php echo $row ['name'];?></h3>
+                        <p><?php echo $row ['price'];?><b> DH</b></p>
+                        <button class="buy-btn">Add to cart</button>
+                    </div>
+                <?php } ?>
+            </div>
+        </section>
+
+        <section id="featured" class="">
+            <div class="container text-center mt-5 py-5">
+                <h3>Best Watch</h3>
+                <hr class="mx-auto">
+                <p>Here you can check our new products with fair price on Shoply</p>
+            </div>
+            <div class="row max-auto container-fluid">
+                <?php while ($row = mysqli_fetch_assoc($resultWatch)) { ?> 
+                    <div class="product text-center col-lg-3 col-lg-3 col-12">
+                        <img class="single-pro-image" src="assets/images/<?php echo $row['image']; ?>" width='150'>
+                        <div class="star">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                        </div>
+                        <h3><?php echo $row ['name'];?></h3>
+                        <p><?php echo $row ['price'];?><b> DH</b></p>
+                        <button class="buy-btn">Add to cart</button>
+                    </div>
+                <?php } ?>
             </div>
         </section>
 
