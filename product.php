@@ -21,14 +21,14 @@ $result = mysqli_query($conn, $query);
     <?php include 'includes/header.php'; ?>
     <div class="container">
         <h1 class="my-4 mt-5 text-center">Our Products</h1>
-        <div class="row g-5 prodetails">
+        <div class="row max-auto container-fluid">
         <?php while ($row = mysqli_fetch_assoc($result)) {?>
-            <div class='col-12 col-md-3 product-card'>
-                <img class="single-pro-image" src="assets/images/<?php echo $row['image']; ?>">
+            <div class='product text-center col-lg-3 col-lg-3 col-12'>
+                <img class="" src="assets/images/<?php echo $row['image']; ?>">
                 <h3><?php echo $row ['name']; ?></h3>
                 <p><?php echo $row ['description']; ?></p>
                 <p><b><?php echo $row ['price']; ?> DH</b></p>
-                <button>Add to cart</button>
+                <button class="buy-btn">Add to cart</button>
             </div>
         <?php } ?>
         </div>

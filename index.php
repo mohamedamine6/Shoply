@@ -41,45 +41,45 @@ $resultAcc = mysqli_query($conn, $queryAcc);
             <div class="row text-center g-4">
 
                 <div class="col-6 col-md-4 col-lg-2">
-                <div class="p-3 shadow-sm rounded">
-                    <img src="../assets/images/features/f1.png" class="img-fluid mb-2" alt="">
-                    <h6>Free Shipping</h6>
-                </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-2">
-                <div class="p-3 shadow-sm rounded">
-                    <img src="../assets/images/features/f2.png" class="img-fluid mb-2" alt="">
-                    <h6>Online Order</h6>
-                </div>
+                    <div class="p-3 shadow-sm rounded">
+                        <img src="/projet/assets/images/f1.png" class="img-fluid mb-2" alt="">
+                        <h6>Free Shipping</h6>
+                    </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-2">
-                <div class="p-3 shadow-sm rounded">
-                    <img src="../assets/images/features/f3.png" class="img-fluid mb-2" alt="">
-                    <h6>Save Money</h6>
-                </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-2">
-                <div class="p-3 shadow-sm rounded">
-                    <img src="../assets/images/features/f4.png" class="img-fluid mb-2" alt="">
-                    <h6>Promotions</h6>
-                </div>
+                    <div class="p-3 shadow-sm rounded">
+                        <img src="/projet/assets/images/f2.png" class="img-fluid mb-2" alt="">
+                        <h6>Online Order</h6>
+                    </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-2">
-                <div class="p-3 shadow-sm rounded">
-                    <img src="../assets/images/features/f5.png" class="img-fluid mb-2" alt="">
-                    <h6>Happy Sell</h6>
-                </div>
+                    <div class="p-3 shadow-sm rounded">
+                        <img src="/projet/assets/images/f3.png" class="img-fluid mb-2" alt="">
+                        <h6>Save Money</h6>
+                    </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-2">
-                <div class="p-3 shadow-sm rounded">
-                    <img src="../assets/images/features/f6.png" class="img-fluid mb-2" alt="">
-                    <h6>24/7 Support</h6>
+                    <div class="p-3 shadow-sm rounded">
+                        <img src="/projet/assets/images/f4.png" class="img-fluid mb-2" alt="">
+                        <h6>Promotions</h6>
+                    </div>
                 </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="p-3 shadow-sm rounded">
+                        <img src="/projet/assets/images/f5.png" class="img-fluid mb-2" alt="">
+                        <h6>Happy Sell</h6>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="p-3 shadow-sm rounded">
+                        <img src="/projet/assets/images/f6.png" class="img-fluid mb-2" alt="">
+                        <h6>24/7 Support</h6>
+                    </div>
                 </div>
 
             </div>
@@ -115,10 +115,10 @@ $resultAcc = mysqli_query($conn, $queryAcc);
             </div>
         </section>
 
-        <section id="featured" class="my-5 py-5">
-            <div class="container text-center mt-5 py-5">
-                <h3>Our Featured</h3>
-                <hr class="mx-auto">
+        <!-- best products -->
+        <section id="featured" class="container my-5 py-5">
+            <div class="text-center mt-5 py-5">
+                <h3 class="h3hr">Our Featured</h3>
                 <p>Here you can check our new products with fair price on Shoply</p>
             </div>
             <div class="row max-auto container-fluid">
@@ -140,10 +140,9 @@ $resultAcc = mysqli_query($conn, $queryAcc);
             </div>
         </section>
 
-        <section id="featured" class="">
+        <section id="featured" class="container">
             <div class="container text-center mt-5 py-5">
-                <h3>Our Accessories</h3>
-                <hr class="mx-auto">
+                <h3 class="h3hr">Our Accessories</h3>
                 <p>Here you can check our new products with fair price on Shoply</p>
             </div>
             <div class="row max-auto container-fluid">
@@ -165,10 +164,9 @@ $resultAcc = mysqli_query($conn, $queryAcc);
             </div>
         </section>
 
-        <section id="featured" class="">
+        <section id="featured" class="container">
             <div class="container text-center mt-5 py-5">
-                <h3>Best Watch</h3>
-                <hr class="mx-auto">
+                <h3 class="h3hr">Best Watch</h3>
                 <p>Here you can check our new products with fair price on Shoply</p>
             </div>
             <div class="row max-auto container-fluid">
