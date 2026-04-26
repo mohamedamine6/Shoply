@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $query);
 <body>
     <!-- navbar -->
     <?php include 'includes/header.php'; ?>
-    <div class="container">
+    <div class="container py-5 mt-5">
         <h1 class="my-4 mt-5 text-center">Our Products</h1>
         <div class="row max-auto container-fluid">
         <?php while ($row = mysqli_fetch_assoc($result)) {?>
