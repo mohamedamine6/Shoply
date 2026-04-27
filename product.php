@@ -1,8 +1,22 @@
 <?php
 require 'config/db.php';
 
-$query = "SELECT * FROM products";
-$result = mysqli_query($conn, $query);
+//pagination le total de produit
+$totalQuery = "SELECT COUNT(*) as total FROM products";
+$totalResult = mysqli_query($conn, $totalQuery);
+$totalRow = mysqli_fetch_assoc($totalResult);
+
+$totalProducts = $totalRow['total'];
+
+$limit = 8;
+$totalPage = ceil($totalProducts / $limit);
+
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+$start = ($page - 1) * $limit;
+
+$pagiQueri = "SELECT * FROM products LIMIT $start, $limit";
+$pagiResult = mysqli_query($conn, $pagiQueri);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +36,7 @@ $result = mysqli_query($conn, $query);
     <div class="container py-5 mt-5">
         <h1 class="my-4 mt-5 text-center">Our Products</h1>
         <div class="row max-auto container-fluid">
-        <?php while ($row = mysqli_fetch_assoc($result)) {?>
+        <?php while ($row = mysqli_fetch_assoc($pagiResult)) {?>
             <div class='product text-center col-lg-3 col-lg-3 col-12'>
                 <img class="" src="assets/images/<?php echo $row['image']; ?>">
                 <h3><?php echo $row ['name']; ?></h3>
@@ -31,6 +45,25 @@ $result = mysqli_query($conn, $query);
                 <button class="buy-btn">Add to cart</button>
             </div>
         <?php } ?>
+        </div>
+        <div class="text-center mt-4">
+
+            <?php
+            $range = 2;
+
+            $startPage = max(1, $page - $range);
+            $endPage = min($totalPage, $page + $range);
+
+            for ($i = $startPage; $i <= $endPage; $i++) {
+                
+                if ($i == $page) {
+                    echo "<span class='btn btn-dark mx-1'>$i</span>";
+                } else {
+                    echo "<a href='product.php?page=$i' class='btn btn-outline-dark mx-1'>$i</a>";
+                }
+            }
+            ?>
+
         </div>
     </div>
 
