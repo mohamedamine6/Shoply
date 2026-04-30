@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require 'config/db.php';
 
 $query = "SELECT * FROM products LIMIT 4";

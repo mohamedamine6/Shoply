@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require 'config/db.php';
 
 $id = intval($_GET['id']);

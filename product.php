@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require 'config/db.php';
 
 //pagination le total de produit
@@ -44,7 +46,8 @@ $pagiResult = mysqli_query($conn, $pagiQueri);
                 </a>
                 <p><?php echo $row ['description']; ?></p>
                 <p><b><?php echo $row ['price']; ?> DH</b></p>
-                <button class="buy-btn">Add to cart</button>
+                <input type="number" name="qty" value="1" min="1" class="form-control w-25 mb-3" style=display:none;>
+                <button type="submit" name="add_to_cart" class="buy-btn">Add to cart</button>
             </div>
         <?php } ?>
         </div>
