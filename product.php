@@ -38,8 +38,10 @@ $pagiResult = mysqli_query($conn, $pagiQueri);
         <div class="row max-auto container-fluid">
         <?php while ($row = mysqli_fetch_assoc($pagiResult)) {?>
             <div class='product text-center col-lg-3 col-lg-3 col-12'>
-                <img class="" src="assets/images/<?php echo $row['image']; ?>">
-                <h3><?php echo $row ['name']; ?></h3>
+                <a href="cart.php?id=<?php echo $row ['id']; ?>">
+                    <img class="" src="assets/images/<?php echo $row['image']; ?>">
+                    <h3><?php echo $row ['name']; ?></h3>
+                </a>
                 <p><?php echo $row ['description']; ?></p>
                 <p><b><?php echo $row ['price']; ?> DH</b></p>
                 <button class="buy-btn">Add to cart</button>

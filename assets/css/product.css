@@ -28,7 +28,7 @@ button {
 button:hover {
   background-color: var(--color-pri);
 }
-.product {
+.product a{
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
@@ -36,6 +36,12 @@ button:hover {
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 1px snow var(--color-primary);
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.product a:hover {
+  color: var(--color-primary);
 }
 
 .product img {
