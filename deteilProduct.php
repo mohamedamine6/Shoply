@@ -35,23 +35,29 @@ $product = mysqli_fetch_assoc($result);
                 <img src="assets/images/<?php echo $product['image']; ?>" alt="product">
             </div>
 
-            <div class="col-md-6">
-                <h3><?php echo $product['name']; ?></h3>
-                <p><?php echo $product['description']; ?></p>
-                <p><b><?php echo $product['price']; ?> DH</b></p>
+            <div class="col-md-6 product">
+                <form method="POST" action="cart.php">
+                    <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+                    <input type="hidden" name="name" value="<?php echo $product['name']; ?>">
+                    <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
+    
+                    <h3><?php echo $product['name']; ?></h3>
+                    <p><?php echo $product['description']; ?></p>
+                    <p><b><?php echo $product['price']; ?> DH</b></p>
 
-                <?php if($product['category_id'] == 1) {?>
-                    <select name="" id="" class="form-control my-3">
-                    <option value="">Chose Size</option>
-                    <option value="">S</option>
-                    <option value="">M</option>
-                    <option value="">L</option>
-                    <option value="">XL</option>
-                </select>
-                <?php } ?>
+                    <?php if($product['category_id'] == 1) {?>
+                        <select name="" id="" class="form-control my-3">
+                        <option value="">Chose Size</option>
+                        <option value="">S</option>
+                        <option value="">M</option>
+                        <option value="">L</option>
+                        <option value="">XL</option>
+                    </select>
+                    <?php } ?>
 
-                <input type="number" value="1" min="1" class="form-control w-25 mb-5">
-                <button class="btn btn-success">Add to Cart</button>
+                    <input type="number" name="qty" value="1" min="1" class="form-control w-25 mb-5">
+                    <button type="submit" name="add_to_cart" class="buy-btn">Add to Cart</button>
+                </form>
             </div>
         </div>
     </div>

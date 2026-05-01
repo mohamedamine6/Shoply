@@ -38,18 +38,24 @@ $pagiResult = mysqli_query($conn, $pagiQueri);
     <div class="container py-5 mt-5">
         <h1 class="my-4 mt-5 text-center">Our Products</h1>
         <div class="row max-auto container-fluid">
-        <?php while ($row = mysqli_fetch_assoc($pagiResult)) {?>
-            <div class='product text-center col-lg-3 col-lg-3 col-12'>
-                <a href="deteilProduct.php?id=<?php echo $row ['id']; ?>">
-                    <img class="" src="assets/images/<?php echo $row['image']; ?>">
-                    <h3><?php echo $row ['name']; ?></h3>
-                </a>
-                <p><?php echo $row ['description']; ?></p>
-                <p><b><?php echo $row ['price']; ?> DH</b></p>
-                <input type="number" name="qty" value="1" min="1" class="form-control w-25 mb-3" style=display:none;>
-                <button type="submit" name="add_to_cart" class="buy-btn">Add to cart</button>
-            </div>
-        <?php } ?>
+            <?php while ($row = mysqli_fetch_assoc($pagiResult)) {?>
+                <div class='product text-center col-lg-3 col-lg-3 col-12'>
+                    <a href="deteilProduct.php?id=<?php echo $row ['id']; ?>">
+                        <img class="" src="assets/images/<?php echo $row['image']; ?>">
+                        <h3><?php echo $row ['name']; ?></h3>
+                    </a>
+                    <p><?php echo $row ['description']; ?></p>
+                    <p><b><?php echo $row ['price']; ?> DH</b></p>
+
+                    <input type="number" name="qty" value="1" min="1" class="form-control w-25 mb-3" style=display:none;>
+                        
+                    <button type="submit" name="add_to_cart" class="buy-btn">
+                        <a href="deteilProduct.php?id=<?php echo $row ['id']; ?>">
+                            Add to cart
+                        </a>
+                    </button>
+                </div>
+                <?php } ?>
         </div>
         <div class="text-center mt-4">
 
