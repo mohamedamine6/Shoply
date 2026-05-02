@@ -3,6 +3,11 @@ session_start();
 
 require 'config/db.php';
 
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
 $query = "SELECT * FROM products LIMIT 4";
 $result = mysqli_query($conn, $query);
 

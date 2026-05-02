@@ -2,7 +2,6 @@
 session_start();
 
 require 'config/db.php';
-
 //pagination le total de produit
 $totalQuery = "SELECT COUNT(*) as total FROM products";
 $totalResult = mysqli_query($conn, $totalQuery);
