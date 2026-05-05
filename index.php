@@ -3,11 +3,6 @@ session_start();
 
 require 'config/db.php';
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-
 $query = "SELECT * FROM products LIMIT 4";
 $result = mysqli_query($conn, $query);
 
@@ -100,7 +95,7 @@ $resultAcc = mysqli_query($conn, $queryAcc);
                     <img class="img-fluid" src="assets/images/new/1.jpg" alt="">
                     <div class="details">
                         <h2>Extreme rare sneakers</h2>
-                        <button class="text-uppercase">Shop now</button>
+                        <button class="text-uppercase" onclick="window.location.href='product.php'">Shop now</button>
                     </div>
                 </div>
 
@@ -108,7 +103,7 @@ $resultAcc = mysqli_query($conn, $queryAcc);
                     <img class="img-fluid" src="assets/images/new/3.jpg" alt="">
                     <div class="details">
                         <h2>Modern Classic Watches</h2>
-                        <button class="text-uppercase">Shop now</button>
+                        <button class="text-uppercase" onclick="window.location.href='product.php'">Shop now</button>
                     </div>
                 </div>
 
@@ -116,7 +111,7 @@ $resultAcc = mysqli_query($conn, $queryAcc);
                     <img class="img-fluid" src="assets/images/new/4.jpg" alt="">
                     <div class="details">
                         <h2>Minimal Style Accessories</h2>
-                        <button class="text-uppercase">Shop now</button>
+                        <button class="text-uppercase" onclick="window.location.href='product.php'">Shop now</button>
                     </div>
                 </div>
             </div>
@@ -141,7 +136,7 @@ $resultAcc = mysqli_query($conn, $queryAcc);
                         </div>
                         <h3><?php echo $row ['name'];?></h3>
                         <p><?php echo $row ['price'];?><b> DH</b></p>
-                        <button class="buy-btn">Add to cart</button>
+                        <button class="buy-btn" onclick="window.location.href='product.php'">Add to cart</button>
                     </div>
                 <?php } ?>
             </div>
@@ -165,7 +160,7 @@ $resultAcc = mysqli_query($conn, $queryAcc);
                         </div>
                         <h3><?php echo $row ['name'];?></h3>
                         <p><?php echo $row ['price'];?><b> DH</b></p>
-                        <button class="buy-btn">Add to cart</button>
+                        <button class="buy-btn" onclick="window.location.href='product.php'">Add to cart</button>
                     </div>
                 <?php } ?>
             </div>
@@ -189,7 +184,7 @@ $resultAcc = mysqli_query($conn, $queryAcc);
                         </div>
                         <h3><?php echo $row ['name'];?></h3>
                         <p><?php echo $row ['price'];?><b> DH</b></p>
-                        <button class="buy-btn">Add to cart</button>
+                        <button class="buy-btn" onclick="window.location.href='product.php'">Add to cart</button>
                     </div>
                 <?php } ?>
             </div>

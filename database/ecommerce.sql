@@ -81,3 +81,31 @@ CREATE TABLE users (
   role VARCHAR(20) DEFAULT 'client'
 );
 
+CREATE TABLE orders (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  total DECIMAL(10,2),
+  status VARCHAR(50) DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE order_items (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  order_id INT,
+  product_id INT,
+  name VARCHAR(255),
+  price DECIMAL(10,2),
+  qty INT,
+  FOREIGN KEY (order_id) REFERENCES orders(id)
+);
+
+CREATE TABLE shipping_addresses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  order_id INT,
+  full_name VARCHAR(255),
+  phone VARCHAR(50),
+  address TEXT,
+  city VARCHAR(100),
+  FOREIGN KEY (order_id) REFERENCES orders(id)
+);

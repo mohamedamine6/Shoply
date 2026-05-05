@@ -86,8 +86,24 @@ if (isset($_POST['add_to_cart'])) {
 
             <?php } } ?>
         </table>
-
-        <h4>Total: <?php echo $total; ?> DH</h4>
+        <div>
+            <h4>Total: <?php echo $total; ?> DH</h4>
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <?php if (isset($_SESSION['user_id'])) {?>
+                    <a href="checkout.php" class="buy-btn mt-4">
+                        Commender
+                    </a>
+                <?php } else { ?>
+                    <a href="login.php" class="buy-btn mt-4">
+                        Login to Order
+                    </a>
+                <?php } ?>
+                <a href="my-orders.php" class="buy-btn mt-4">
+                    My Orders
+                </a>
+            </div>
+        </div>
+        
     </div>
 
     <!-- footer -->
