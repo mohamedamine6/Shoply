@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background: var( --color-light);
+    color: var(--color-primary);
+}
+
+.buy-btn {
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    opacity: 0.9;
+}

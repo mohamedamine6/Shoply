@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background-color: var(--color-light);
+}
+
+.register-card {
+    width: 100%;
+    max-width: 450px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 25px;
+}
+
+.form-control {
+    height: 50px;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: var(--color-accent);
+    box-shadow: none;
+}
+
+.register-btn {
+    background-color: var(--color-accent);
+    color: var( --color-white);
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+.login-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-link:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+    opacity: 0.9;
+}

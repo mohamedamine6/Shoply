@@ -81,6 +81,21 @@ CREATE TABLE users (
   role VARCHAR(20) DEFAULT 'client'
 );
 
+ALTER TABLE users
+MODIFY role ENUM('client','admin') DEFAULT 'client';
+
+ALTER TABLE users
+ADD created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+ALTER TABLE users
+MODIFY name VARCHAR(100) NOT NULL,
+MODIFY email VARCHAR(100) NOT NULL,
+MODIFY password VARCHAR(255) NOT NULL;
+
+UPDATE users
+SET role = 'admin'
+WHERE email = 'admin@gmail.com';
+
 CREATE TABLE orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
