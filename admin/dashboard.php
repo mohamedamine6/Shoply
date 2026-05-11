@@ -13,72 +13,11 @@
 <body>
     <div class="d-flex" id="wrapper">
         <!-- sidebar starts here -->
-        <div class="bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 primary-text fs-4 border-bottom">
-                <h3 class="fw-bold">Shop<span>ly</span></h3>
-            </div>
-
-            <div class="list-group list-group-flush my-3 d-flex flex-column vh-100">
-                <a href="" class="list-group-item list-group-item-action bg-transparent second-text active">
-                    <i class='bx bxs-dashboard'></i>
-                    Dashboard
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class='bx bxs-package'></i>
-                    Products
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class='bx bx-purchase-tag-alt'></i>
-                    categories
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class='bx bx-cart'></i>
-                    commandes
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class='bx bxs-group'></i>
-                    Clients
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class='bx bx-chat'></i>
-                    Messages
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold  mt-auto">
-                    <i class='bx bx-log-out-circle' ></i>
-                    Logout
-                </a>
-            </div>
-        </div>
-        <!-- sidebar ends here -->
+        <?php include 'includes/header.php'; ?>
         <div id="page-content-wrapper">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
-                <div class="d-flex align-items-center">
-                    <i class="bx bx-objects-horizontal-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0">Dashboard</h2>
-                </div>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle second-text fw-bold" id="navbarDropdown"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Mohamed Amine
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <!-- sidebar ends here -->
+            <?php include 'includes/sidebar.php'; ?>
 
             <div class="container-fluid px-4">
                 <div class="row g-3 my-2">
@@ -127,16 +66,253 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row mt-5 container-fluid px-4">
+
+                <!-- Dernières commandes -->
+                <div class="col-lg-8 mb-4">
+                    <div class="card shadow-sm border-0 rounded-3">
+
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0 fw-bold">
+                                <i class='bx bx-cart-alt'></i>
+                                Dernières commandes
+                            </h5>
+                        </div>
+
+                        <div class="card-body">
+
+                            <table class="table table-hover align-middle">
+
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Client</th>
+                                        <th>Produit</th>
+                                        <th>Montant</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>#1021</td>
+                                        <td>Mohamed</td>
+                                        <td>T-shirt Nike</td>
+                                        <td>450 DH</td>
+                                        <td>
+                                            <span class="badge bg-success">
+                                                Livré
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>#1022</td>
+                                        <td>Yassine</td>
+                                        <td>Watch Casio</td>
+                                        <td>1200 DH</td>
+                                        <td>
+                                            <span class="badge bg-warning text-dark">
+                                                En attente
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>#1023</td>
+                                        <td>Karim</td>
+                                        <td>Air Jordan</td>
+                                        <td>2200 DH</td>
+                                        <td>
+                                            <span class="badge bg-danger">
+                                                Annulé
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Derniers messages -->
+                <div class="col-lg-4 mb-4">
+
+                    <div class="card shadow-sm border-0 rounded-3">
+
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0 fw-bold">
+                                <i class='bx bx-chat'></i>
+                                Derniers messages
+                            </h5>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="d-flex align-items-start mb-4">
+
+                                <div class="d-flex align-items-center justify-content-center border rounded-circle secondary-bg text-white ms-2 me-1" style="width:40px; height:40px;">
+                                   <span class="p-0 second-text fw-bold">M</span>
+                                </div>
+
+                                <div>
+                                    <h6 class="mb-1 fw-bold">
+                                        Mohamed
+                                    </h6>
+
+                                    <p class="text-muted small mb-0">
+                                        Bonjour, ma commande est arrivée ?
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex align-items-start mb-4">
+
+                                <div class="d-flex align-items-center justify-content-center border rounded-circle secondary-bg text-white ms-2 me-1" style="width:40px; height:40px;">
+                                    <span class="p-0 second-text fw-bold">K</span>
+                                </div>
+
+                                <div>
+                                    <h6 class="mb-1 fw-bold">
+                                        Karim
+                                    </h6>
+
+                                    <p class="text-muted small mb-0">
+                                        Je veux changer la taille.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex align-items-start">
+
+                                <div class="d-flex align-items-center justify-content-center border rounded-circle secondary-bg text-white ms-2 me-1" style="width:40px; height:40px;">
+                                    <span class="p-0 second-text fw-bold">S</span>
+                                </div>
+
+                                <div>
+                                    <h6 class="mb-1 fw-bold">
+                                        Sara
+                                    </h6>
+
+                                    <p class="text-muted small mb-0">
+                                        Merci pour le service 🔥
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Produits récents -->
+
+            <div class="container-fluid px-4">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0 fw-bold">
+                            <i class='bx bxs-package'></i>
+                            Produits récents
+                        </h5>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+
+                            <table class="table table-hover align-middle">
+
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Nom</th>
+                                        <th>Prix</th>
+                                        <th>Stock</th>
+                                        <th>Catégorie</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <img src="https://via.placeholder.com/60"
+                                            class="rounded">
+                                        </td>
+
+                                        <td>Nike Hoodie</td>
+
+                                        <td>650 DH</td>
+
+                                        <td>
+                                            <span class="badge bg-success">
+                                                Disponible
+                                            </span>
+                                        </td>
+
+                                        <td>Vêtements</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="https://via.placeholder.com/60"
+                                            class="rounded">
+                                        </td>
+
+                                        <td>Apple Watch</td>
+
+                                        <td>3200 DH</td>
+
+                                        <td>
+                                            <span class="badge bg-warning text-dark">
+                                                Peu
+                                            </span>
+                                        </td>
+
+                                        <td>Accessoires</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="https://via.placeholder.com/60"
+                                            class="rounded">
+                                        </td>
+
+                                        <td>Jordan 4</td>
+
+                                        <td>2800 DH</td>
+
+                                        <td>
+                                            <span class="badge bg-danger">
+                                                Rupture
+                                            </span>
+                                        </td>
+
+                                        <td>Chaussures</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script>
 </body>
 </html>
