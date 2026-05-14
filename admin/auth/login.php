@@ -25,6 +25,7 @@ if (isset($_POST['login'])) {
             // créer une session pour l'utilisateur
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
+            $_SESSION['user_name'] = $user['name'];
             $_SESSION['role'] = $user['role'];
 
             // rediriger selon le rôle de l'utilisateur

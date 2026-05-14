@@ -33,7 +33,7 @@ body {
 
 .register-btn {
     background-color: var(--color-accent);
-    color: var( --color-white);
+    color: var(--color-white);
     border: none;
     height: 50px;
     border-radius: 10px;
